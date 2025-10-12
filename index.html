@@ -88,39 +88,137 @@
       </div>
       <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- Backend Development -->
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Python (FastAPI)</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>JavaScript + Typescript</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL/PostgreSQL</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Node.js</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Flask & Express</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>MongoDB</h3><p>Intermediate</p></div></article>
-            </div>
-          </div>
-          <!-- Frontend Development -->
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>React + Tailwind</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Material UI</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>HTML/CSS (WCAG 2.1)</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Jest & React Testing Library</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Next.js</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Figma</h3><p>Intermediate</p></div></article>
-            </div>
-          </div>
+<!-- ===== EXPERIENCE (Hybrid: clean + recruiter-friendly) ===== -->
+<section id="experience">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Experience</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <!-- AI & Automation -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">AI and Automation</h2>
+        <ul class="stack-list">
+          <li><strong>LangChain and LlamaIndex</strong> — built retrieval-augmented pipelines and multi-agent flows for onboarding and document intelligence.</li>
+          <li><strong>OpenAI and Hugging Face APIs</strong> — integrated model calls with caching, batching, and scoring to scale GPT systems reliably.</li>
+          <li><strong>Prompt evaluation</strong> — processed 1k+ model outputs per day using A/B tests and gold sets, reducing wrong answers by 60 percent.</li>
+          <li><strong>Vector databases</strong> — Qdrant and pgvector for embedding, indexing, and versioning SOP documents with clear citations.</li>
+        </ul>
+      </div>
+
+      <!-- Backend Engineering -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Backend Engineering</h2>
+        <ul class="stack-list">
+          <li><strong>FastAPI, Flask, Node.js</strong> — secure REST APIs, Slack integrated bots, and production grade donation services.</li>
+          <li><strong>PostgreSQL and MongoDB</strong> — relational and NoSQL schemas for investment simulations and lab automation.</li>
+          <li><strong>ETL and caching</strong> — clean, chunk, embed flows with request caching to avoid repeat model and API calls.</li>
+          <li><strong>Auth and security</strong> — OAuth, JWT, role scoped access, and rate limits to protect endpoints while keeping UX smooth.</li>
+        </ul>
+      </div>
+
+      <!-- Frontend and DevOps -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Frontend and DevOps</h2>
+        <ul class="stack-list">
+          <li><strong>React and Tailwind</strong> — dashboards and admin tools with responsive layouts and simple states.</li>
+          <li><strong>CI and CD</strong> — GitHub Actions for tests, linting, and deploys across projects.</li>
+          <li><strong>Docker, Vercel, Hugging Face Hub</strong> — reproducible builds and simple monitoring.</li>
+          <li><strong>Figma and accessibility</strong> — WCAG 2.1 aware design and component level reviews.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <!-- Hugging Face Sentiment API -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/huggingface-api.png" alt="Hugging Face Sentiment API preview" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Hugging Face Sentiment API</h2>
+        <p class="project-blurb">
+          A containerized inference service using <strong>FastAPI</strong> and <strong>Hugging Face Transformers</strong>. 
+          Exposes a <code>/predict</code> endpoint for real-time sentiment analysis with parallel request testing in Jupyter. 
+          Designed for low-latency inference and scalable serving with Docker.
+        </p>
+        <ul class="project-points">
+          <li>Model: distilbert-base-uncased-finetuned-sst-2-english</li>
+          <li>Async serving with Uvicorn + FastAPI</li>
+          <li>Scalable design with load-balancing and caching support</li>
+        </ul>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/marsh-design/huggingface-sentiment-api'">GitHub</button>
+          <button class="btn btn-color-1 project-btn" 
+            onclick="location.href='https://huggingface.co/spaces/marsh-design/huggingface-sentiment-api'">Open Project</button>
         </div>
       </div>
-    </section>
-    <section id="projects">
+
+      <!-- FastAPI Observability Demo -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/fastapi-observability.png" alt="FastAPI Observability Demo preview" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">FastAPI Observability Demo</h2>
+        <p class="project-blurb">
+          A <strong>FastAPI microservice</strong> demonstrating full observability using 
+          <strong>Grafana</strong>, <strong>Tempo</strong>, <strong>Prometheus</strong>, and <strong>Loki</strong>. 
+          Features <strong>OpenTelemetry instrumentation</strong> for distributed tracing, metrics, and logs, deployed via Docker Compose.
+        </p>
+        <ul class="project-points">
+          <li>End-to-end observability stack (traces, metrics, logs)</li>
+          <li>OpenTelemetry SDK and exemplar trace linking</li>
+          <li>Grafana dashboards for real-time insight and debugging</li>
+        </ul>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/marsh-design/fastapi_observability_main'">GitHub</button>
+          <button class="btn btn-color-1 project-btn" 
+            onclick="location.href='https://grafana.com/grafana/dashboards/fastapi-observability-demo'">Open Project</button>
+        </div>
+      </div>
+
+      <!-- Personal Finance Dashboard -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/personal-finance-dashboard.png" alt="Personal Finance Dashboard preview" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Personal Finance Dashboard</h2>
+        <p class="project-blurb">
+          A <strong>Streamlit</strong> dashboard that visualizes Bluecoins spending data using 
+          <strong>Python</strong>, <strong>SQL</strong>, and <strong>Docker</strong>. 
+          Enables users to explore income and expenses with clean, interactive data visualizations for smarter budgeting.
+        </p>
+        <ul class="project-points">
+          <li>ETL pipeline from CSV → SQL → Streamlit UI</li>
+          <li>Modular Docker setup for easy local runs</li>
+          <li>Charts for category trends, income flow, and net balance</li>
+        </ul>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/marsh-design/personal-finance-dashboard-clean'">GitHub</button>
+          <button class="btn btn-color-1 project-btn" 
+            onclick="location.href='https://marsh-design-finance-dashboard.streamlit.app/'">Open Project</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+</section>
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
