@@ -11,13 +11,17 @@
   <body>
     <nav id="desktop-nav">
       <div class="logo">Marium Ashraf</div>
-      <div>
+      <div class="nav-right">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+          <span class="theme-icon">🌙</span>
+        </button>
       </div>
     </nav>
     <nav id="hamburger-nav">
@@ -31,8 +35,14 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li class="theme-toggle-mobile">
+            <button id="theme-toggle-mobile" class="theme-toggle" onclick="toggleTheme()">
+              <span class="theme-icon">🌙</span> Toggle Theme
+            </button>
+          </li>
         </div>
       </div>
     </nav>
@@ -140,6 +150,57 @@
 
     </div>
   </div>
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Skills & Technologies</h1>
+  
+  <div class="skills-container">
+    <div class="skills-category">
+      <h3 class="skills-category-title">Languages & Frameworks</h3>
+      <div class="skills-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">HTML/CSS</span>
+      </div>
+    </div>
+    
+    <div class="skills-category">
+      <h3 class="skills-category-title">AI & Machine Learning</h3>
+      <div class="skills-tags">
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">LlamaIndex</span>
+        <span class="skill-tag">OpenAI API</span>
+        <span class="skill-tag">Hugging Face</span>
+        <span class="skill-tag">Transformers</span>
+        <span class="skill-tag">Vector Databases</span>
+        <span class="skill-tag">Prompt Engineering</span>
+      </div>
+    </div>
+    
+    <div class="skills-category">
+      <h3 class="skills-category-title">DevOps & Tools</h3>
+      <div class="skills-tags">
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">GitHub Actions</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Grafana</span>
+        <span class="skill-tag">Prometheus</span>
+        <span class="skill-tag">Vercel</span>
+      </div>
+    </div>
+  </div>
+  
   <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
 </section>
 
@@ -148,25 +209,39 @@
   <p class="section__text__p1">Browse My Recent</p>
   <h1 class="title">Projects</h1>
 
+  <!-- Project Filter Buttons -->
+  <div class="project-filters">
+    <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+    <button class="filter-btn" onclick="filterProjects('ai')">AI/ML</button>
+    <button class="filter-btn" onclick="filterProjects('backend')">Backend</button>
+    <button class="filter-btn" onclick="filterProjects('frontend')">Frontend</button>
+    <button class="filter-btn" onclick="filterProjects('devops')">DevOps</button>
+  </div>
+
   <div class="experience-details-container">
     <div class="about-containers">
 
       <!-- Hugging Face Sentiment API -->
-      <div class="details-container color-container">
+      <div class="details-container color-container project-card" data-category="ai backend">
         <div class="article-container">
           <img src="./assets/huggingface-api.png" alt="Hugging Face Sentiment API preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Hugging Face Sentiment API</h2>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">AI/ML</span>
+          <span class="project-tag">Docker</span>
+        </div>
         <p class="project-blurb">
           A <strong>containerized FastAPI inference service</strong> integrating 
           <strong>Hugging Face Transformers</strong> for real-time text sentiment prediction. Designed with 
           <strong>Uvicorn</strong> for async concurrency and validated via <strong>Jupyter-based parallel request testing</strong>.
         </p>
-        <ul class="project-points">
-          <li>Model: <code>distilbert-base-uncased-finetuned-sst-2-english</code> — optimized for low-latency inference.</li>
-          <li>Built and deployed with <strong>Docker</strong>; supports <strong>batching, async I/O,</strong> and scaling via Gunicorn workers.</li>
-          <li>Includes future-ready plans for <strong>NGINX load balancing</strong>, <strong>structured logging</strong>, and <strong>Prometheus metrics</strong>.</li>
-        </ul>
+        <p class="project-details">
+          Built with <strong>Docker</strong> and the <code>distilbert-base-uncased-finetuned-sst-2-english</code> model for optimized low-latency inference. 
+          Features async I/O, batching, and scaling via Gunicorn workers with future-ready plans for NGINX load balancing, structured logging, and Prometheus metrics.
+        </p>
         <div class="btn-container">
           <button class="btn btn-color-2 project-btn"
             onclick="location.href='https://github.com/marsh-design/huggingface-sentiment-api'">GitHub</button>
@@ -176,22 +251,26 @@
       </div>
 
       <!-- FastAPI Observability Demo -->
-      <div class="details-container color-container">
+      <div class="details-container color-container project-card" data-category="backend devops">
         <div class="article-container">
           <img src="./assets/fastapi-observability.png" alt="FastAPI Observability Demo preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">FastAPI Observability Demo</h2>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">Grafana</span>
+          <span class="project-tag">Docker</span>
+        </div>
         <p class="project-blurb">
           A <strong>FastAPI microservice</strong> demonstrating end-to-end observability through 
           <strong>Grafana, Prometheus, Tempo, and Loki</strong>. Features <strong>OpenTelemetry instrumentation</strong> 
           for trace-to-log correlation and metric exemplars, deployed via <strong>Docker Compose</strong>.
         </p>
-        <ul class="project-points">
-          <li>Implements <strong>trace injection</strong> across three FastAPI services using the OpenTelemetry SDK.</li>
-          <li>Configures <strong>Prometheus metrics with exemplars</strong>, <strong>Tempo tracing</strong>, and <strong>Loki log pipelines</strong>.</li>
-          <li>Load tested via <code>Locust</code> and <code>k6</code> to validate distributed tracing and resource efficiency.</li>
-          <li>Visualized metrics, spans, and logs in Grafana dashboards for <strong>real-time debugging and performance monitoring</strong>.</li>
-        </ul>
+        <p class="project-details">
+          Implements <strong>trace injection</strong> across three FastAPI services using the OpenTelemetry SDK with <strong>Prometheus metrics, Tempo tracing, and Loki log pipelines</strong>. 
+          Load tested via <code>Locust</code> and <code>k6</code> to validate distributed tracing and resource efficiency, with metrics visualized in Grafana dashboards for real-time debugging and performance monitoring.
+        </p>
         <div class="btn-container">
           <button class="btn btn-color-2 project-btn"
             onclick="location.href='https://github.com/marsh-design/fastapi_observability_main'">GitHub</button>
@@ -201,22 +280,26 @@
       </div>
 
       <!-- Personal Finance Dashboard -->
-      <div class="details-container color-container">
+      <div class="details-container color-container project-card" data-category="frontend backend">
         <div class="article-container">
           <img src="./assets/personal-finance-dashboard.png" alt="Personal Finance Dashboard preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Personal Finance Dashboard</h2>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Streamlit</span>
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">Docker</span>
+        </div>
         <p class="project-blurb">
           A <strong>Streamlit</strong>-based analytics app for visualizing Bluecoins expense data using 
           <strong>Python, SQL, and Docker</strong>. Designed to support intuitive budget tracking and 
           category insights with a responsive, minimal interface.
         </p>
-        <ul class="project-points">
-          <li>Developed <strong>ETL pipeline</strong> from CSV → SQL → Streamlit UI using <strong>pandas</strong> and <strong>SQLAlchemy</strong>.</li>
-          <li>Containerized via <strong>Docker Compose</strong> for reproducibility and clean local setup.</li>
-          <li>Provides dynamic charts on <strong>income trends, category flow,</strong> and <strong>net balance</strong>.</li>
-          <li>Future integrations planned: OAuth login and hosted deployment (Render/Vercel).</li>
-        </ul>
+        <p class="project-details">
+          Developed an <strong>ETL pipeline</strong> from CSV → SQL → Streamlit UI using <strong>pandas</strong> and <strong>SQLAlchemy</strong>, containerized via <strong>Docker Compose</strong> for reproducibility. 
+          Provides dynamic charts on income trends, category flow, and net balance with future integrations planned for OAuth login and hosted deployment.
+        </p>
         <div class="btn-container">
           <button class="btn btn-color-2 project-btn"
             onclick="location.href='https://github.com/marsh-design/personal-finance-dashboard-clean'">GitHub</button>
@@ -226,22 +309,26 @@
       </div>
 
       <!-- Robo Advisor -->
-      <div class="details-container color-container">
+      <div class="details-container color-container project-card" data-category="ai backend">
         <div class="article-container">
           <img src="./assets/robo-advisor.png" alt="Robo Advisor preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Robo Advisor</h2>
+        <div class="project-tags">
+          <span class="project-tag">AWS</span>
+          <span class="project-tag">Lex</span>
+          <span class="project-tag">Lambda</span>
+          <span class="project-tag">AI/ML</span>
+        </div>
         <p class="project-blurb">
           A <strong>serverless financial chatbot</strong> that guides users through retirement investment planning. 
           Built with <strong>AWS Lex</strong> for NLP dialogue management and <strong>AWS Lambda</strong> for 
           real-time portfolio recommendations based on user risk profiles.
         </p>
-        <ul class="project-points">
-          <li>Implements <strong>Lambda-backed validation</strong> for user intents and secure financial calculations.</li>
-          <li>Algorithm-driven portfolio allocation (stocks/bonds/cash) based on <strong>risk tolerance</strong> and horizon.</li>
-          <li>Serverless architecture ensures scalability and low-cost deployment.</li>
-          <li>Integrated conversational flow designed for <strong>accuracy, responsiveness,</strong> and ease of use.</li>
-        </ul>
+        <p class="project-details">
+          Implements <strong>Lambda-backed validation</strong> for user intents and secure financial calculations with algorithm-driven portfolio allocation based on risk tolerance and horizon. 
+          Built with serverless architecture for scalability and low-cost deployment, featuring an integrated conversational flow designed for accuracy, responsiveness, and ease of use.
+        </p>
         <div class="btn-container">
           <button class="btn btn-color-2 project-btn"
             onclick="location.href='https://github.com/marsh-design/roboadvisor'">GitHub</button>
@@ -257,59 +344,42 @@
 </section>
 
 
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Cell Growth Simulation</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/marsh-design/cell-growth-simulation'">
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Personal Finance Dashboard</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/marsh-design/personalfinanceboard'">
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Robo Advisor</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/marsh-design/roboadvisor'">
-                Github
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-    </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p><a href="mailto:mariumashraf.MA@gmail.com">mariumashraf.MA@gmail.com</a></p>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>I'm always interested in discussing new opportunities, collaborations, or just having a chat about technology and innovation.</p>
+          
+          <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+              <p><a href="mailto:mariumashraf.MA@gmail.com">mariumashraf.MA@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+              <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+              <p><a href="https://www.linkedin.com/in/mariumashraf/">LinkedIn</a></p>
+            </div>
+          </div>
         </div>
-        <div class="contact-info-container">
-          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-          <p><a href="https://www.linkedin.com/in/mariumashraf/">LinkedIn</a></p>
-        </div>
+        
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-color-1">Send Message</button>
+        </form>
       </div>
     </section>
     <footer>
@@ -318,6 +388,7 @@
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
