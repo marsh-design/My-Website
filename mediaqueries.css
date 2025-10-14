@@ -105,6 +105,11 @@
   .contact-container {
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+  }
+  
+  .contact-form {
+    max-width: 100%;
   }
   
   .project-filters {

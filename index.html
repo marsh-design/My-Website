@@ -158,46 +158,33 @@
   <p class="section__text__p1">Explore My</p>
   <h1 class="title">Skills & Technologies</h1>
   
-  <div class="skills-container">
-    <div class="skills-category">
-      <h3 class="skills-category-title">Languages & Frameworks</h3>
-      <div class="skills-tags">
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">FastAPI</span>
-        <span class="skill-tag">Flask</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">SQL</span>
-        <span class="skill-tag">HTML/CSS</span>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      
+      <!-- AI and Automation -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">AI and Automation</h2>
+        <p>
+          I build retrieval-augmented and multi-agent systems using <strong>LangChain</strong>, <strong>LlamaIndex</strong>, and vector databases like <strong>Qdrant</strong> and <strong>pgvector</strong>. I've integrated <strong>OpenAI</strong> and <strong>Hugging Face APIs</strong> with caching, batching, and scoring to make GPT-based workflows faster and more reliable. My prompt evaluation pipelines have processed over 1,000 model outputs per day, cutting hallucinations by 60% and improving overall accuracy.
+        </p>
       </div>
-    </div>
-    
-    <div class="skills-category">
-      <h3 class="skills-category-title">AI & Machine Learning</h3>
-      <div class="skills-tags">
-        <span class="skill-tag">LangChain</span>
-        <span class="skill-tag">LlamaIndex</span>
-        <span class="skill-tag">OpenAI API</span>
-        <span class="skill-tag">Hugging Face</span>
-        <span class="skill-tag">Transformers</span>
-        <span class="skill-tag">Vector Databases</span>
-        <span class="skill-tag">Prompt Engineering</span>
+
+      <!-- Backend Engineering -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Backend Engineering</h2>
+        <p>
+          My backend work blends performance and precision — from building REST APIs with <strong>FastAPI</strong>, <strong>Flask</strong>, and <strong>Node.js</strong> to designing <strong>PostgreSQL</strong> and <strong>MongoDB</strong> schemas for investment simulations and lab automation. I've developed ETL pipelines that clean, chunk, and embed data for retrieval while caching frequent requests. I also design secure authentication layers with <strong>OAuth</strong>, <strong>JWT</strong>, and rate-limited endpoints that keep systems stable and UX smooth.
+        </p>
       </div>
-    </div>
-    
-    <div class="skills-category">
-      <h3 class="skills-category-title">DevOps & Tools</h3>
-      <div class="skills-tags">
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">GitHub Actions</span>
-        <span class="skill-tag">AWS</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">Grafana</span>
-        <span class="skill-tag">Prometheus</span>
-        <span class="skill-tag">Vercel</span>
+
+      <!-- Frontend and DevOps -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Frontend and DevOps</h2>
+        <p>
+          On the frontend, I build intuitive, accessible dashboards with <strong>React</strong> and <strong>Tailwind</strong> — tested and deployed through CI/CD pipelines on <strong>GitHub Actions</strong>. My projects use <strong>Docker</strong>, <strong>Vercel</strong>, and <strong>Hugging Face Hub</strong> for reproducible builds and deployment monitoring. I also prioritize inclusive design with <strong>WCAG 2.1</strong> accessibility reviews and <strong>Figma</strong> prototyping to ensure every interface feels seamless and human.
+        </p>
       </div>
+
     </div>
   </div>
   
@@ -209,14 +196,6 @@
   <p class="section__text__p1">Browse My Recent</p>
   <h1 class="title">Projects</h1>
 
-  <!-- Project Filter Buttons -->
-  <div class="project-filters">
-    <button class="filter-btn active" onclick="filterProjects('all')">All</button>
-    <button class="filter-btn" onclick="filterProjects('ai')">AI/ML</button>
-    <button class="filter-btn" onclick="filterProjects('backend')">Backend</button>
-    <button class="filter-btn" onclick="filterProjects('frontend')">Frontend</button>
-    <button class="filter-btn" onclick="filterProjects('devops')">DevOps</button>
-  </div>
 
   <div class="experience-details-container">
     <div class="about-containers">
@@ -227,12 +206,6 @@
           <img src="./assets/project-1.png" alt="Hugging Face Sentiment API preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Hugging Face Sentiment API</h2>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">AI/ML</span>
-          <span class="project-tag">Docker</span>
-        </div>
         <p class="project-blurb">
           A <strong>containerized FastAPI inference service</strong> integrating 
           <strong>Hugging Face Transformers</strong> for real-time text sentiment prediction. Designed with 
@@ -256,12 +229,6 @@
           <img src="./assets/project-2.png" alt="FastAPI Observability Demo preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">FastAPI Observability Demo</h2>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">Grafana</span>
-          <span class="project-tag">Docker</span>
-        </div>
         <p class="project-blurb">
           A <strong>FastAPI microservice</strong> demonstrating end-to-end observability through 
           <strong>Grafana, Prometheus, Tempo, and Loki</strong>. Features <strong>OpenTelemetry instrumentation</strong> 
@@ -285,12 +252,6 @@
           <img src="./assets/project-3.png" alt="Personal Finance Dashboard preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Personal Finance Dashboard</h2>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">Streamlit</span>
-          <span class="project-tag">SQL</span>
-          <span class="project-tag">Docker</span>
-        </div>
         <p class="project-blurb">
           A <strong>Streamlit</strong>-based analytics app for visualizing Bluecoins expense data using 
           <strong>Python, SQL, and Docker</strong>. Designed to support intuitive budget tracking and 
@@ -314,12 +275,6 @@
           <img src="./assets/project-4.png" alt="Robo Advisor preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Robo Advisor</h2>
-        <div class="project-tags">
-          <span class="project-tag">AWS</span>
-          <span class="project-tag">Lex</span>
-          <span class="project-tag">Lambda</span>
-          <span class="project-tag">AI/ML</span>
-        </div>
         <p class="project-blurb">
           A <strong>serverless financial chatbot</strong> that guides users through retirement investment planning. 
           Built with <strong>AWS Lex</strong> for NLP dialogue management and <strong>AWS Lambda</strong> for 
