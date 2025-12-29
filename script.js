@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize contact form
   initContactForm();
+  
+  // Initialize achievement counters
+  initAchievementCounters();
 });
 
 // Scroll animations
@@ -162,4 +165,40 @@ function showNotification(message, type = 'info') {
       document.body.removeChild(notification);
     }, 300);
   }, 5000);
+}
+
+// Animated achievement counters
+function initAchievementCounters() {
+  const counters = document.querySelectorAll('.achievement-number');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        animateCounter(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    counterObserver.observe(counter);
+  });
+}
+
+function animateCounter(element) {
+  const target = parseInt(element.getAttribute('data-target'));
+  const duration = 2000; // 2 seconds
+  const increment = target / (duration / 16); // 60fps
+  let current = 0;
+
+  const updateCounter = () => {
+    current += increment;
+    if (current < target) {
+      element.textContent = Math.floor(current);
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = target;
+    }
+  };
+
+  updateCounter();
 }

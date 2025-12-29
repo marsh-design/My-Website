@@ -148,4 +148,23 @@
   .nav-right {
     gap: 1rem;
   }
+  
+  .achievements-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .achievement-number {
+    font-size: 2.5rem;
+  }
+  
+  .achievement-symbol {
+    font-size: 1.5rem;
+  }
+  
+  .metric-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
 }

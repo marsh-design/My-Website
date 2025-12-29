@@ -378,6 +378,91 @@ section {
   margin: auto 0;
 }
 
+/* ACHIEVEMENTS & METRICS SECTION */
+
+#achievements {
+  position: relative;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 2rem auto;
+  padding: 2rem 0;
+}
+
+.achievement-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--hover-color), var(--border-color));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover::before {
+  transform: scaleX(1);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--hover-color);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.achievement-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--hover-color);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.achievement-symbol {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+.achievement-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 1rem 0 0.5rem;
+}
+
+.achievement-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -388,7 +473,15 @@ section {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.experience-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 .experience-details-container {
@@ -552,6 +645,31 @@ article .icon {
   line-height: 1.6;
   font-size: 0.95rem;
   color: rgb(85, 85, 85);
+}
+
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.metric-badge {
+  background: var(--hover-color);
+  color: var(--bg-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.metric-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* CONTACT */
