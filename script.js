@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize achievement counters
   initAchievementCounters();
+  
+  // Initialize typing animation
+  initTypingAnimation();
+  
+  // Initialize scroll progress
+  initScrollProgress();
 });
 
 // Scroll animations
@@ -201,4 +207,62 @@ function animateCounter(element) {
   };
 
   updateCounter();
+}
+
+// Typing animation
+function initTypingAnimation() {
+  const typingElement = document.getElementById('typing-text');
+  if (!typingElement) return;
+  
+  const texts = [
+    'AI & LLM Engineer',
+    'Full-Stack Developer',
+    'Building Reliable, Ethical & Scalable Tech'
+  ];
+  
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+  
+  function type() {
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+      typingElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      typingElement.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
+    }
+    
+    if (!isDeleting && charIndex === currentText.length) {
+      // Pause at end of text
+      typingSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      // Move to next text
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      typingSpeed = 500;
+    }
+    
+    setTimeout(type, typingSpeed);
+  }
+  
+  type();
+}
+
+// Scroll progress indicator
+function initScrollProgress() {
+  const progressBar = document.getElementById('scroll-progress');
+  if (!progressBar) return;
+  
+  window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
 }

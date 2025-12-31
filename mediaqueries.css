@@ -155,6 +155,12 @@
     padding: 1rem 0;
   }
   
+  @media screen and (max-width: 900px) {
+    .achievements-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
   .achievement-number {
     font-size: 2.5rem;
   }
@@ -166,5 +172,14 @@
   .metric-badge {
     font-size: 0.7rem;
     padding: 0.3rem 0.6rem;
+  }
+  
+  .tech-icon {
+    font-size: 1.5rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.25rem;
+    min-height: 2rem;
   }
 }

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+    
     <nav id="desktop-nav">
       <div class="logo">Marium Ashraf</div>
       <div class="nav-right">
@@ -55,7 +58,9 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Marium Ashraf</h1>
-        <p class="section__text__p2">AI and Full-Stack Developer | Building Reliable,Ethical & Scalable Tech</p>
+        <p class="section__text__p2">
+          <span id="typing-text"></span><span class="typing-cursor">|</span>
+        </p>
         <div class="btn-container">
           <button class="btn btn-color-2" onclick="window.open('./assets/Marium_Ashraf_Resume.pdf')">
             Download Resume
@@ -117,43 +122,19 @@
     </div>
     
     <div class="achievement-card">
-      <div class="achievement-icon">🚀</div>
-      <div class="achievement-number" data-target="50">0</div>
-      <div class="achievement-symbol">%</div>
-      <p class="achievement-label">Onboarding Time Reduction</p>
-      <p class="achievement-description">LyrataGPT SDK-like interface</p>
-    </div>
-    
-    <div class="achievement-card">
-      <div class="achievement-icon">📈</div>
-      <div class="achievement-number" data-target="35">0</div>
-      <div class="achievement-symbol">%</div>
-      <p class="achievement-label">Model Quality Improvement</p>
-      <p class="achievement-description">LLM evaluation pipelines at Outlier</p>
-    </div>
-    
-    <div class="achievement-card">
-      <div class="achievement-icon">🔧</div>
-      <div class="achievement-number" data-target="60">0</div>
-      <div class="achievement-symbol">%</div>
-      <p class="achievement-label">Debugging Cycle Reduction</p>
-      <p class="achievement-description">SQL-backed observability systems</p>
-    </div>
-    
-    <div class="achievement-card">
-      <div class="achievement-icon">⚙️</div>
-      <div class="achievement-number" data-target="30">0</div>
-      <div class="achievement-symbol">%</div>
-      <p class="achievement-label">Feature Delivery Acceleration</p>
-      <p class="achievement-description">Standardized workflows & refactors</p>
-    </div>
-    
-    <div class="achievement-card">
       <div class="achievement-icon">📊</div>
       <div class="achievement-number" data-target="1000">0</div>
       <div class="achievement-symbol">+</div>
       <p class="achievement-label">Model Outputs Processed Daily</p>
       <p class="achievement-description">Scalable evaluation pipelines</p>
+    </div>
+    
+    <div class="achievement-card">
+      <div class="achievement-icon">🚀</div>
+      <div class="achievement-number" data-target="50">0</div>
+      <div class="achievement-symbol">%</div>
+      <p class="achievement-label">Onboarding Time Reduction</p>
+      <p class="achievement-description">LyrataGPT SDK-like interface</p>
     </div>
   </div>
   
@@ -258,6 +239,13 @@
           <img src="./assets/project-1.png" alt="Hugging Face Sentiment API preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Hugging Face Sentiment API</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="FastAPI">⚡</span>
+          <span class="tech-icon" title="Docker">🐳</span>
+          <span class="tech-icon" title="Hugging Face">🤗</span>
+          <span class="tech-icon" title="Uvicorn">🚀</span>
+        </div>
         <div class="project-metrics">
           <span class="metric-badge">Low-Latency</span>
           <span class="metric-badge">Async I/O</span>
@@ -284,6 +272,14 @@
           <img src="./assets/dashboard.png" alt="FastAPI Observability Demo preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">FastAPI Observability Demo</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="FastAPI">⚡</span>
+          <span class="tech-icon" title="Grafana">📊</span>
+          <span class="tech-icon" title="Prometheus">🔍</span>
+          <span class="tech-icon" title="Docker">🐳</span>
+          <span class="tech-icon" title="OpenTelemetry">📡</span>
+        </div>
         <div class="project-metrics">
           <span class="metric-badge">Full Observability</span>
           <span class="metric-badge">Load Tested</span>
@@ -310,6 +306,13 @@
           <img src="./assets/project-3.png" alt="Personal Finance Dashboard preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Personal Finance Dashboard</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="Streamlit">📈</span>
+          <span class="tech-icon" title="SQL">🗄️</span>
+          <span class="tech-icon" title="Docker">🐳</span>
+          <span class="tech-icon" title="Pandas">🐼</span>
+        </div>
         <div class="project-metrics">
           <span class="metric-badge">ETL Pipeline</span>
           <span class="metric-badge">Data Visualization</span>
@@ -337,6 +340,13 @@
           <img src="./assets/project-4.png" alt="Robo Advisor preview" class="project-img" />
         </div>
         <h2 class="experience-sub-title project-title">Robo Advisor</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="AWS">☁️</span>
+          <span class="tech-icon" title="AWS Lex">💬</span>
+          <span class="tech-icon" title="AWS Lambda">⚡</span>
+          <span class="tech-icon" title="NLP">🧠</span>
+          <span class="tech-icon" title="Serverless">🚀</span>
+        </div>
         <div class="project-metrics">
           <span class="metric-badge">Serverless</span>
           <span class="metric-badge">NLP-Powered</span>
@@ -374,15 +384,15 @@
           <h3>Let's Connect</h3>
           <p>I'm always interested in discussing new opportunities, collaborations, or just having a chat about technology and innovation.</p>
           
-          <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-              <p><a href="mailto:mariumashraf.MA@gmail.com">mariumashraf.MA@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-              <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-              <p><a href="https://www.linkedin.com/in/mariumashraf/">LinkedIn</a></p>
-            </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:mariumashraf.MA@gmail.com">mariumashraf.MA@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/mariumashraf/">LinkedIn</a></p>
+        </div>
           </div>
         </div>
         

@@ -32,6 +32,18 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Scroll Progress Indicator */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--hover-color), var(--border-color));
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -247,6 +259,18 @@ section {
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  min-height: 2.5rem;
+}
+
+.typing-cursor {
+  color: var(--hover-color);
+  font-weight: 300;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 .title {
@@ -386,9 +410,9 @@ section {
 
 .achievements-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 80rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 90rem;
   margin: 2rem auto;
   padding: 2rem 0;
 }
@@ -645,6 +669,28 @@ article .icon {
   line-height: 1.6;
   font-size: 0.95rem;
   color: rgb(85, 85, 85);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.tech-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  filter: grayscale(20%);
+}
+
+.tech-icon:hover {
+  transform: scale(1.2) translateY(-3px);
+  filter: grayscale(0%);
 }
 
 .project-metrics {
