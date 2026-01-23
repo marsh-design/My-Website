@@ -182,4 +182,22 @@
     font-size: 1.25rem;
     min-height: 2rem;
   }
+  
+  .certifications-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .certification-card {
+    max-width: 100%;
+    min-width: auto;
+  }
+  
+  .cert-badge {
+    font-size: 3rem;
+  }
+  
+  .cert-title {
+    font-size: 1.25rem;
+  }
 }
