@@ -40,20 +40,22 @@
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
-          <li><a href="#achievements" onclick="toggleMenu()">Achievements</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#business-intelligence" onclick="toggleMenu()">BI & Analysis</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          <li class="theme-toggle-mobile">
-            <button id="theme-toggle-mobile" class="theme-toggle" onclick="toggleTheme()">
-              <span class="theme-icon">🌙</span> Toggle Theme
-            </button>
-          </li>
+        <div class="menu-links" id="menu-links">
+          <ul class="menu-links-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#business-intelligence">BI & Analysis</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="theme-toggle-mobile">
+              <button type="button" class="theme-toggle" onclick="toggleTheme(); toggleMenu();">
+                <span class="theme-icon">🌙</span> Toggle Theme
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

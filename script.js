@@ -1,8 +1,19 @@
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  if (menu && icon) {
+    menu.classList.toggle("open");
+    icon.classList.toggle("open");
+  }
+}
+
+function closeMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  if (menu && icon) {
+    menu.classList.remove("open");
+    icon.classList.remove("open");
+  }
 }
 
 // Theme toggle functionality
@@ -45,6 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize scroll progress
   initScrollProgress();
+  
+  // Hamburger menu: close when a nav link is clicked (so navigation works)
+  const menuLinks = document.getElementById("menu-links");
+  if (menuLinks) {
+    menuLinks.addEventListener("click", function (e) {
+      if (e.target.tagName === "A" && e.target.getAttribute("href").startsWith("#")) {
+        closeMenu();
+      }
+    });
+  }
 });
 
 // Scroll animations
