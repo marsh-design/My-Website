@@ -271,6 +271,20 @@ section {
   min-height: 2.5rem;
 }
 
+.hero-metrics {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.section-intro {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
 .typing-cursor {
   color: var(--hover-color);
   font-weight: 300;
