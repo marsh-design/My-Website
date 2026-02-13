@@ -78,8 +78,12 @@
           </button>
         </div>
         <div id="socials-container">
-          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/mariumashraf/'" />
-          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/marsh-design'" />
+          <a href="https://www.linkedin.com/in/mariumashraf/" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+            <img src="./assets/linkedin.png" alt="LinkedIn" class="icon social-icon" />
+          </a>
+          <a href="https://github.com/marsh-design" target="_blank" rel="noopener" class="social-icon-link" aria-label="GitHub">
+            <img src="./assets/github.png" alt="GitHub" class="icon social-icon" />
+          </a>
         </div>
       </div>
     </section>
@@ -311,36 +315,34 @@
   <div class="experience-details-container">
     <div class="about-containers">
 
-      <!-- Hugging Face Sentiment API -->
-      <div class="details-container color-container project-card" data-category="ai backend">
+      <!-- CapsuleOS -->
+      <div class="details-container color-container project-card" data-category="frontend backend ai">
         <div class="article-container">
-          <img src="./assets/project-1.png" alt="Hugging Face Sentiment API preview" class="project-img" />
+          <img src="./assets/project-1.png" alt="CapsuleOS - quarterly capsule wardrobe planner" class="project-img" />
         </div>
-        <h2 class="experience-sub-title project-title">Hugging Face Sentiment API</h2>
+        <h2 class="experience-sub-title project-title">CapsuleOS</h2>
         <div class="tech-stack">
-          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="React">⚛️</span>
           <span class="tech-icon" title="FastAPI">⚡</span>
+          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="SQLite">🗄️</span>
+          <span class="tech-icon" title="Tailwind">🎨</span>
           <span class="tech-icon" title="Docker">🐳</span>
-          <span class="tech-icon" title="Hugging Face">🤗</span>
-          <span class="tech-icon" title="Uvicorn">🚀</span>
         </div>
         <div class="project-metrics">
-          <span class="metric-badge">Low-Latency</span>
-          <span class="metric-badge">Async I/O</span>
-          <span class="metric-badge">Scalable</span>
+          <span class="metric-badge">Full-Stack</span>
+          <span class="metric-badge">AI Decision Assistant</span>
+          <span class="metric-badge">CI/CD</span>
         </div>
         <p class="project-blurb">
-          A <strong>containerized FastAPI inference service</strong> integrating 
-          <strong>Hugging Face Transformers</strong> for real-time text sentiment prediction. Designed with 
-          <strong>Uvicorn</strong> for async concurrency and validated via <strong>Jupyter-based parallel request testing</strong>.
+          <strong>Quarterly capsule wardrobe planner</strong> + “Should I buy this?” AI decision assistant. Plans cohesive wardrobes and scores items for closet overlap, price-per-wear, and review-derived fit/value.
         </p>
         <p class="project-details">
-          Built with <strong>Docker</strong> and the <code>distilbert-base-uncased-finetuned-sst-2-english</code> model for optimized low-latency inference. 
-          Features async I/O, batching, and scaling via Gunicorn workers with future-ready plans for NGINX load balancing, structured logging, and Prometheus metrics.
+          <strong>React + Vite + Tailwind</strong> frontend, <strong>FastAPI</strong> backend, <strong>SQLite</strong>. Capsule generation with real product data, palette extraction, versatility scoring, TTL caching. Evaluation harness skeleton, CI (lint, format, tests). Demo coming soon.
         </p>
         <div class="btn-container">
           <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/marsh-design/huggingface-sentiment-api'">GitHub</button>
+            onclick="location.href='https://github.com/marsh-design/capsule-os'">GitHub</button>
         </div>
       </div>
 
