@@ -149,6 +149,11 @@
     gap: 1rem;
   }
   
+  .about-containers.skills-four,
+  .about-containers.experience-grid {
+    grid-template-columns: 1fr;
+  }
+
   .achievements-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;

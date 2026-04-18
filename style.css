@@ -413,6 +413,16 @@ section {
   margin-top: 2rem;
 }
 
+.about-containers.skills-four {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-containers.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .about-details-container {
   justify-content: center;
   flex-direction: column;

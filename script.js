@@ -236,11 +236,10 @@ function initTypingAnimation() {
   if (!typingElement) return;
   
   const texts = [
-    'AI & LLM Engineer | Vector Institute DaRMoD',
-    'Data Scientist & Analytics Engineer',
-    'Backend & Systems Engineer',
-    'Business Intelligence & Systems Analyst',
-    'Building Reliable, Ethical & Scalable Tech'
+    'Digital Strategy & Data Insights',
+    'Strategy & Operations | SWE + QA + Cloud',
+    'DaRMoD (Vector Institute) in Production',
+    'Execution, Documentation & Executive-Ready Reporting'
   ];
   
   let textIndex = 0;
