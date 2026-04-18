@@ -236,10 +236,10 @@ function initTypingAnimation() {
   if (!typingElement) return;
   
   const texts = [
-    'Digital Strategy & Data Insights',
-    'Strategy & Operations | SWE + QA + Cloud',
-    'DaRMoD (Vector Institute) in Production',
-    'Execution, Documentation & Executive-Ready Reporting'
+    'Strategy · Data · Delivery',
+    'DaRMoD · SQL · Agile',
+    'SWE + QA + Cloud',
+    'Exec-ready · Adoption-focused'
   ];
   
   let textIndex = 0;
