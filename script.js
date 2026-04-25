@@ -48,9 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize contact form
   initContactForm();
   
-  // Initialize achievement counters
-  initAchievementCounters();
-  
   // Initialize typing animation
   initTypingAnimation();
   
@@ -194,62 +191,15 @@ function showNotification(message, type = 'info') {
   }, 5000);
 }
 
-// Animated achievement counters
-function initAchievementCounters() {
-  const counters = document.querySelectorAll('.achievement-number');
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        entry.target.classList.add('counted');
-        animateCounter(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-
-  counters.forEach(counter => {
-    counterObserver.observe(counter);
-  });
-
-  // counter fallback: ensure values animate even if observer misses
-  setTimeout(() => {
-    counters.forEach(counter => {
-      if (!counter.classList.contains('counted')) {
-        counter.classList.add('counted');
-        animateCounter(counter);
-      }
-    });
-  }, 1200);
-}
-
-function animateCounter(element) {
-  const target = parseInt(element.getAttribute('data-target'));
-  const duration = 2000; // 2 seconds
-  const increment = target / (duration / 16); // 60fps
-  let current = 0;
-
-  const updateCounter = () => {
-    current += increment;
-    if (current < target) {
-      element.textContent = Math.floor(current);
-      requestAnimationFrame(updateCounter);
-    } else {
-      element.textContent = target;
-    }
-  };
-
-  updateCounter();
-}
-
 // Typing animation
 function initTypingAnimation() {
   const typingElement = document.getElementById('typing-text');
   if (!typingElement) return;
   
   const texts = [
-    'Journey mapping in progress',
-    'Building service blueprints',
-    'Running workshops + research synthesis',
-    'Design ops that teams actually adopt'
+    'Incoming Service Design Intern @ Equinix',
+    'Incoming Service Design Intern @ Equinix',
+    'Incoming Service Design Intern @ Equinix'
   ];
   
   let textIndex = 0;
