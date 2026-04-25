@@ -1,6 +1,7 @@
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
+    min-height: 0;
+    height: auto;
     margin-bottom: 6rem;
   }
   .about-containers {
@@ -35,7 +36,8 @@
     height: fit-content;
   }
   section {
-    margin: 0 5%;
+    width: min(960px, calc(100% - 2.5rem));
+    margin: 0 auto;
   }
   .section__pic-container {
     width: 275px;
@@ -50,10 +52,12 @@
 @media screen and (max-width: 600px) {
   #contact,
   footer {
-    height: 40vh;
+    height: auto;
+    min-height: 0;
   }
   #profile {
-    height: 83vh;
+    height: auto;
+    min-height: 0;
     margin-bottom: 0;
   }
   article {
@@ -87,9 +91,15 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: min(78vw, 320px);
+    height: auto;
     justify-content: center;
+  }
+
+  section {
+    width: calc(100% - 1.5rem);
+    margin: 0 auto;
+    padding-bottom: 2rem;
   }
   .section__text__p2 {
     font-size: 1.02rem;
@@ -108,10 +118,12 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    text-align: center;
   }
   
   .contact-form {
     max-width: 100%;
+    width: 100%;
   }
   
   .project-filters {

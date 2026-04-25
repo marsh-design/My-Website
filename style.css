@@ -226,8 +226,9 @@ a:hover {
 
 section {
   padding-top: 6vh;
-  height: 96vh;
-  margin: 0 10rem;
+  padding-bottom: 3rem;
+  width: min(1100px, calc(100% - 3rem));
+  margin: 0 auto;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -241,8 +242,9 @@ section {
 #profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5rem;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .section__pic-container {
@@ -250,6 +252,12 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .section__text {
@@ -453,17 +461,21 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .arrow {
   position: absolute;
-  right: -5rem;
+  right: -2.5rem;
   bottom: 2.5rem;
 }
 
 .details-container {
   padding: 1.35rem 1.35rem 1.2rem;
   flex: 1;
+  width: 100%;
   background: var(--card-bg);
   border-radius: 2rem;
   border: var(--hover-color) 0.1rem solid;
@@ -625,11 +637,11 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
+  text-align: center;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 article {
@@ -760,7 +772,10 @@ article .icon {
 .project-img {
   border-radius: 2rem;
   width: 90%;
-  height: 90%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .project-title {
@@ -842,15 +857,16 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .contact-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
   max-width: 80rem;
   margin: 0 auto;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
@@ -908,7 +924,9 @@ article .icon {
 
 .contact-info-upper-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
@@ -940,7 +958,8 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  min-height: 18vh;
+  padding: 1rem 0 2rem;
   margin: 0 1rem;
 }
 
