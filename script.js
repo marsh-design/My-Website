@@ -246,10 +246,10 @@ function initTypingAnimation() {
   if (!typingElement) return;
   
   const texts = [
-    'Service Design · Design Ops · Delivery',
-    'Journey maps · Blueprints · Workshops',
-    'Research synthesis · Stakeholder alignment',
-    'Engineering fluency for strategy roles'
+    'Journey mapping in progress',
+    'Building service blueprints',
+    'Running workshops + research synthesis',
+    'Design ops that teams actually adopt'
   ];
   
   let textIndex = 0;
