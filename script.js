@@ -204,11 +204,21 @@ function initAchievementCounters() {
         animateCounter(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
 
   counters.forEach(counter => {
     counterObserver.observe(counter);
   });
+
+  // counter fallback: ensure values animate even if observer misses
+  setTimeout(() => {
+    counters.forEach(counter => {
+      if (!counter.classList.contains('counted')) {
+        counter.classList.add('counted');
+        animateCounter(counter);
+      }
+    });
+  }, 1200);
 }
 
 function animateCounter(element) {
@@ -236,10 +246,10 @@ function initTypingAnimation() {
   if (!typingElement) return;
   
   const texts = [
-    'Incoming Service Design Intern @ Equinix',
-    'Journey Maps · Service Blueprints · Design Ops',
-    'Research Synthesis · Stakeholder Alignment',
-    'Strategy · Data · Delivery'
+    'Service Design · Design Ops · Delivery',
+    'Journey maps · Blueprints · Workshops',
+    'Research synthesis · Stakeholder alignment',
+    'Engineering fluency for strategy roles'
   ];
   
   let textIndex = 0;

@@ -225,7 +225,7 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  padding-top: 6vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -255,6 +255,7 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
+  max-width: 48rem;
 }
 
 .section__text p {
@@ -263,24 +264,33 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  margin-bottom: 0.45rem;
+  color: var(--text-secondary);
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  margin: 0.85rem auto 1.1rem;
+  line-height: 1.6;
+  max-width: 44rem;
   min-height: 2.5rem;
+  color: var(--text-secondary);
 }
 
 .hero-metrics {
-  margin: 1rem 0;
-  font-size: 1.1rem;
+  margin: 1rem 0 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .section-intro {
   max-width: 42rem;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.4rem;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--text-secondary);
 }
@@ -297,8 +307,16 @@ section {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.4rem;
+  line-height: 1.2;
   text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+#profile .title {
+  font-size: clamp(1.85rem, 3.2vw, 2.8rem);
+  max-width: 18ch;
+  margin: 0 auto;
 }
 
 #socials-container {
@@ -444,14 +462,18 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 1.35rem 1.35rem 1.2rem;
   flex: 1;
   background: var(--card-bg);
   border-radius: 2rem;
   border: var(--hover-color) 0.1rem solid;
   border-color: var(--border-color);
   text-align: center;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-2px);
 }
 
 .section-container {
@@ -533,9 +555,9 @@ section {
 }
 
 .cert-description {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.55;
   margin-bottom: 1rem;
   text-align: left;
 }
@@ -630,16 +652,17 @@ section {
 }
 
 .achievement-label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-color);
-  margin: 1rem 0 0.5rem;
+  margin: 0.85rem 0 0.45rem;
 }
 
 .achievement-description {
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   color: var(--text-secondary);
-  margin: 0;
+  margin: 0 auto;
+  max-width: 28ch;
 }
 
 /* EXPERIENCE SECTION */
@@ -649,18 +672,19 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--text-color);
   font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.35;
+  margin-bottom: 0.7rem;
 }
 
 .experience-date {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 500;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .exp-bullets {
@@ -668,12 +692,15 @@ section {
   padding-left: 1.2rem;
   text-align: left;
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.48;
+  max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .exp-bullets li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .experience-details-container {
@@ -823,7 +850,7 @@ article .icon {
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 0.8rem 0 0.45rem;
   color: black;
 }
 
@@ -833,10 +860,19 @@ article .icon {
 }
 
 .project-details {
-  margin: 1rem 0;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  margin: 0.65rem auto 0.95rem;
+  line-height: 1.52;
+  font-size: 0.9rem;
+  max-width: 44ch;
   color: rgb(85, 85, 85);
+}
+
+.project-blurb {
+  line-height: 1.55;
+  font-size: 0.95rem;
+  max-width: 44ch;
+  margin: 0 auto 0.45rem;
+  color: var(--text-secondary);
 }
 
 .tech-stack {

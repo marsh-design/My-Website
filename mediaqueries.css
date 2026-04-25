@@ -92,13 +92,15 @@
     justify-content: center;
   }
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
   }
   .title {
-    font-size: 2rem;
+    font-size: 1.72rem;
+    line-height: 1.25;
   }
   .text-container {
-    text-align: justify;
+    text-align: left;
   }
   
   /* New mobile optimizations */
@@ -184,7 +186,7 @@
   }
   
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 1.02rem;
     min-height: 2rem;
   }
   
@@ -204,5 +206,16 @@
   
   .cert-title {
     font-size: 1.25rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.12rem;
+    line-height: 1.35;
+  }
+
+  .exp-bullets {
+    font-size: 0.86rem;
+    line-height: 1.45;
+    padding-left: 1rem;
   }
 }
