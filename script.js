@@ -236,10 +236,10 @@ function initTypingAnimation() {
   if (!typingElement) return;
   
   const texts = [
-    'Strategy · Data · Delivery',
-    'DaRMoD · SQL · Agile',
-    'SWE + QA + Cloud',
-    'Exec-ready · Adoption-focused'
+    'Incoming Service Design Intern @ Equinix',
+    'Journey Maps · Service Blueprints · Design Ops',
+    'Research Synthesis · Stakeholder Alignment',
+    'Strategy · Data · Delivery'
   ];
   
   let textIndex = 0;

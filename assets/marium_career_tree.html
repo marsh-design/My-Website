@@ -1,0 +1,291 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+
+.tree-wrap { padding: 24px 0 32px; position: relative; overflow-x: auto; }
+
+.root-node {
+  display: flex; flex-direction: column; align-items: center;
+  margin-bottom: 0;
+}
+.node-card {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-lg);
+  padding: 10px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+  z-index: 2;
+}
+.node-card:hover { border-color: var(--color-border-primary); background: var(--color-background-secondary); }
+.node-card .label { font-size: 13px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; }
+.node-card .sublabel { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; line-height: 1.3; }
+.node-card .time { font-size: 10px; color: var(--color-text-tertiary); margin-top: 3px; letter-spacing: 0.5px; }
+
+.node-card.root { border-color: var(--color-border-info); border-width: 1.5px; min-width: 200px; }
+.node-card.root .label { font-size: 14px; }
+
+.node-card.tier1-teal  { border-left: 3px solid #0F6E56; }
+.node-card.tier1-purple { border-left: 3px solid #534AB7; }
+.node-card.tier1-coral  { border-left: 3px solid #993C1D; }
+
+.node-card.leaf-teal   { background: #E1F5EE; border-color: #5DCAA5; }
+.node-card.leaf-teal .label { color: #085041; }
+.node-card.leaf-teal .sublabel { color: #0F6E56; }
+.node-card.leaf-teal .time { color: #1D9E75; }
+
+.node-card.leaf-purple { background: #EEEDFE; border-color: #AFA9EC; }
+.node-card.leaf-purple .label { color: #26215C; }
+.node-card.leaf-purple .sublabel { color: #534AB7; }
+.node-card.leaf-purple .time { color: #7F77DD; }
+
+.node-card.leaf-coral  { background: #FAECE7; border-color: #F0997B; }
+.node-card.leaf-coral .label { color: #4A1B0C; }
+.node-card.leaf-coral .sublabel { color: #993C1D; }
+.node-card.leaf-coral .time { color: #D85A30; }
+
+.connector-v {
+  width: 1.5px;
+  background: var(--color-border-secondary);
+  margin: 0 auto;
+}
+.connector-h-wrap {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  justify-content: center;
+}
+.connector-h {
+  position: absolute;
+  top: 0;
+  height: 1.5px;
+  background: var(--color-border-secondary);
+}
+
+.branch-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tier-row {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.branch-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.leaves {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.legend {
+  display: flex; gap: 20px; justify-content: center;
+  margin-top: 28px; flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--color-text-secondary); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+</style>
+
+<div class="tree-wrap">
+  <h2 class="sr-only">Marium Ashraf career path tree from Equinix Service Design Intern, showing three major branches: design and strategy, technical and product, and founder and operator paths</h2>
+
+  <div class="root-node">
+    <div class="node-card root" onclick="sendPrompt('Tell me more about what I will do as a Service Design Intern at Equinix')">
+      <div class="label">Service Design Intern</div>
+      <div class="sublabel">Equinix · Global Operations</div>
+      <div class="time">May 2025 — now</div>
+    </div>
+    <div class="connector-v" style="height:28px"></div>
+  </div>
+
+  <div style="position:relative">
+    <div class="connector-h" style="left:calc(16.66% + 0px); right:calc(16.66% + 0px); top:0;"></div>
+
+    <div class="tier-row">
+
+      <div class="branch-wrap" style="width:33.33%">
+        <div class="connector-v" style="height:20px"></div>
+        <div class="node-card tier1-teal" onclick="sendPrompt('What does a Design and Strategy career path look like for someone with my background?')">
+          <div class="label">Design & strategy</div>
+          <div class="sublabel">Service · product · ops design</div>
+        </div>
+        <div class="connector-v" style="height:20px"></div>
+        <div style="position:relative;width:100%">
+          <div class="connector-h" style="left:25%;right:25%;top:0"></div>
+          <div style="display:flex;justify-content:center;gap:0">
+            <div class="branch-wrap" style="width:50%">
+              <div class="connector-v" style="height:18px"></div>
+              <div class="leaves">
+                <div class="node-card leaf-teal" onclick="sendPrompt('What does a Service Designer role look like at a tech company in Canada?')">
+                  <div class="label">Service Designer</div>
+                  <div class="sublabel">Tech or consulting firm</div>
+                  <div class="time">2–3 yrs post-grad</div>
+                </div>
+                <div class="node-card leaf-teal" onclick="sendPrompt('What is a Design Operations Manager and how would my background fit?')">
+                  <div class="label">Design Ops Manager</div>
+                  <div class="sublabel">Scale design teams</div>
+                  <div class="time">3–5 yrs</div>
+                </div>
+                <div class="node-card leaf-teal" onclick="sendPrompt('What is a Head of Service Design role and what skills do I need?')">
+                  <div class="label">Head of Service Design</div>
+                  <div class="sublabel">Design org leadership</div>
+                  <div class="time">6–9 yrs</div>
+                </div>
+              </div>
+            </div>
+            <div class="branch-wrap" style="width:50%">
+              <div class="connector-v" style="height:18px"></div>
+              <div class="leaves">
+                <div class="node-card leaf-teal" onclick="sendPrompt('What is a Strategy Consultant role and how does my technical background help?')">
+                  <div class="label">Strategy Consultant</div>
+                  <div class="sublabel">McKinsey · Deloitte · BCG</div>
+                  <div class="time">2–4 yrs post-grad</div>
+                </div>
+                <div class="node-card leaf-teal" onclick="sendPrompt('What does a Business Automation Analyst do at a fintech company?')">
+                  <div class="label">Business Automation Analyst</div>
+                  <div class="sublabel">Fintech · Wealthsimple · Relay</div>
+                  <div class="time">1–2 yrs post-grad</div>
+                </div>
+                <div class="node-card leaf-teal" onclick="sendPrompt('What is a Chief of Staff role in a startup and how do I get there?')">
+                  <div class="label">Chief of Staff</div>
+                  <div class="sublabel">High-growth startup</div>
+                  <div class="time">4–7 yrs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="branch-wrap" style="width:33.33%">
+        <div class="connector-v" style="height:20px"></div>
+        <div class="node-card tier1-purple" onclick="sendPrompt('What does a Technical and Product career path look like for someone with both engineering and service design experience?')">
+          <div class="label">Technical & product</div>
+          <div class="sublabel">Engineering meets strategy</div>
+        </div>
+        <div class="connector-v" style="height:20px"></div>
+        <div style="position:relative;width:100%">
+          <div class="connector-h" style="left:25%;right:25%;top:0"></div>
+          <div style="display:flex;justify-content:center;gap:0">
+            <div class="branch-wrap" style="width:50%">
+              <div class="connector-v" style="height:18px"></div>
+              <div class="leaves">
+                <div class="node-card leaf-purple" onclick="sendPrompt('What is a Solutions Engineer or Forward Deployed Engineer and how does my profile fit?')">
+                  <div class="label">Solutions Engineer</div>
+                  <div class="sublabel">Forward-deployed · client-facing</div>
+                  <div class="time">1–2 yrs post-grad</div>
+                </div>
+                <div class="node-card leaf-purple" onclick="sendPrompt('What does a Technical Product Manager do and how do I become one?')">
+                  <div class="label">Technical Product Manager</div>
+                  <div class="sublabel">AI or infrastructure products</div>
+                  <div class="time">2–4 yrs</div>
+                </div>
+                <div class="node-card leaf-purple" onclick="sendPrompt('What is a VP of Product role and what path leads there from my background?')">
+                  <div class="label">VP of Product</div>
+                  <div class="sublabel">Product org leadership</div>
+                  <div class="time">7–10 yrs</div>
+                </div>
+              </div>
+            </div>
+            <div class="branch-wrap" style="width:50%">
+              <div class="connector-v" style="height:18px"></div>
+              <div class="leaves">
+                <div class="node-card leaf-purple" onclick="sendPrompt('What does an AI Engineer or LLM Engineer role look like and what companies hire for it?')">
+                  <div class="label">AI / LLM Engineer</div>
+                  <div class="sublabel">RAG · agents · pipelines</div>
+                  <div class="time">1–2 yrs post-grad</div>
+                </div>
+                <div class="node-card leaf-purple" onclick="sendPrompt('What is a Platform or Operations Engineer role in a startup?')">
+                  <div class="label">Platform Engineer</div>
+                  <div class="sublabel">Ops tooling · automation</div>
+                  <div class="time">2–3 yrs</div>
+                </div>
+                <div class="node-card leaf-purple" onclick="sendPrompt('What is a CTO path and how does someone with my background get there?')">
+                  <div class="label">CTO</div>
+                  <div class="sublabel">Technical leadership</div>
+                  <div class="time">10–15 yrs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="branch-wrap" style="width:33.33%">
+        <div class="connector-v" style="height:20px"></div>
+        <div class="node-card tier1-coral" onclick="sendPrompt('What does a Founder or Operator career path look like and how does my experience position me for it?')">
+          <div class="label">Founder & operator</div>
+          <div class="sublabel">Build your own thing</div>
+        </div>
+        <div class="connector-v" style="height:20px"></div>
+        <div style="position:relative;width:100%">
+          <div class="connector-h" style="left:25%;right:25%;top:0"></div>
+          <div style="display:flex;justify-content:center;gap:0">
+            <div class="branch-wrap" style="width:50%">
+              <div class="connector-v" style="height:18px"></div>
+              <div class="leaves">
+                <div class="node-card leaf-coral" onclick="sendPrompt('What is an Entrepreneur in Residence role and how does someone get into one?')">
+                  <div class="label">Entrepreneur in Residence</div>
+                  <div class="sublabel">VC-backed idea testing</div>
+                  <div class="time">4–7 yrs</div>
+                </div>
+                <div class="node-card leaf-coral" onclick="sendPrompt('What would a fintech or AI startup founded by someone with my background look like?')">
+                  <div class="label">Fintech / AI founder</div>
+                  <div class="sublabel">Ops automation · SMB tools</div>
+                  <div class="time">5–8 yrs</div>
+                </div>
+                <div class="node-card leaf-coral" onclick="sendPrompt('What does it mean to be a General Partner at a VC fund and how do people get there from an operator background?')">
+                  <div class="label">GP at a VC fund</div>
+                  <div class="sublabel">Backing the next wave</div>
+                  <div class="time">12–18 yrs</div>
+                </div>
+              </div>
+            </div>
+            <div class="branch-wrap" style="width:50%">
+              <div class="connector-v" style="height:18px"></div>
+              <div class="leaves">
+                <div class="node-card leaf-coral" onclick="sendPrompt('What does an Independent Consultant do and how do I build a consulting practice from my background?')">
+                  <div class="label">Independent Consultant</div>
+                  <div class="sublabel">AI ops · process design</div>
+                  <div class="time">3–6 yrs</div>
+                </div>
+                <div class="node-card leaf-coral" onclick="sendPrompt('What does a fractional COO or Head of Ops role look like for early stage startups?')">
+                  <div class="label">Fractional COO</div>
+                  <div class="sublabel">Seed-stage ops leadership</div>
+                  <div class="time">5–8 yrs</div>
+                </div>
+                <div class="node-card leaf-coral" onclick="sendPrompt('What would it look like to build a design and automation agency from my background?')">
+                  <div class="label">Agency founder</div>
+                  <div class="sublabel">Design + automation studio</div>
+                  <div class="time">4–7 yrs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#0F6E56"></div>Design & strategy</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#534AB7"></div>Technical & product</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#993C1D"></div>Founder & operator</div>
+    <div class="legend-item" style="font-style:italic">Click any role to explore it ↗</div>
+  </div>
+</div>
