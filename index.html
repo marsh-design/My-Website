@@ -4,28 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Marium Ashraf — Service Design, Strategy, and Delivery. Incoming Service Design Intern at Equinix."
-    />
-    <meta
-      name="keywords"
-      content="Service Design, Strategy, Design Ops, Journey Mapping, Service Blueprint, Equinix, Operations"
-    />
-    <title>Marium Ashraf — Service Design · Strategy · Delivery</title>
+    <meta name="description" content="Marium Ashraf — strategy, data, and delivery. DaRMoD · SQL · Agile · Full-stack when needed." />
+    <meta name="keywords" content="Digital Strategy, Data Analysis, SQL, Python, DaRMoD, Vector Institute, Strategy Consulting, SWE Intern, Agile, Jira, Azure DevOps, Executive Reporting" />
+    <title>Marium Ashraf — Strategy, Data &amp; Delivery</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <!-- Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
-
+    
     <nav id="desktop-nav">
       <div class="logo">Marium Ashraf</div>
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#direction">Direction</a></li>
-          <li><a href="#method">Method</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#analysis-delivery">Analysis &amp; Delivery</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
@@ -33,7 +32,6 @@
         </button>
       </div>
     </nav>
-
     <nav id="hamburger-nav">
       <div class="logo">Marium Ashraf</div>
       <div class="hamburger-menu">
@@ -44,9 +42,13 @@
         </div>
         <div class="menu-links" id="menu-links">
           <ul class="menu-links-list">
-            <li><a href="#work">Work</a></li>
-            <li><a href="#direction">Direction</a></li>
-            <li><a href="#method">Method</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#analysis-delivery">Analysis &amp; Delivery</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="theme-toggle-mobile">
               <button type="button" class="theme-toggle" onclick="toggleTheme(); toggleMenu();">
@@ -57,22 +59,23 @@
         </div>
       </div>
     </nav>
-
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.png" alt="Marium Ashraf profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Service Design · Strategy · Delivery</p>
-        <h1 class="title hero-headline">
-          I make complex systems legible - and the people inside them, heard.
-        </h1>
-        <p class="hero-subhead">
-          I'm a service designer and engineer who sits at the intersection of how things work and how people experience them. Right now I'm doing that at Equinix. Eventually I want to do it at scale - or build something from scratch.
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Marium Ashraf</h1>
+        <p class="section__text__p2">
+          <span id="typing-text"></span><span class="typing-cursor">|</span>
         </p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="location.href='./#work'">See my work</button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">Let's talk</button>
+          <button class="btn btn-color-2" onclick="window.open('./assets/Marium_Ashraf_Resume_.pdf')">
+            Download Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
         <div id="socials-container">
           <a href="https://www.linkedin.com/in/mariumashraf/" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
@@ -84,175 +87,423 @@
         </div>
       </div>
     </section>
-
     <section id="about">
-      <p class="section__text__p1">Position</p>
-      <h1 class="title">About</h1>
-      <div class="about-body">
-        <p class="about-lead">Most people pick a lane - design or engineering, strategy or delivery. I never did, and it turns out that's the point.</p>
-        <p>
-          I'm a Computer Engineering student at Toronto Metropolitan University, graduating April 2027. I'm currently an incoming Service Design Intern at Equinix, where I'll work across journey mapping, service blueprints, and design ops - the full picture of how an experience actually holds together.
-        </p>
-        <p>
-          What I bring to a room isn't just what I know. It's how I communicate it. I take genuinely complicated things - broken workflows, research synthesis, stakeholder misalignment - and make them land clearly.
-        </p>
-        <p>
-          I've worked with early-stage startups, led strategy projects, built dashboards, shipped code, and written the exec decks that explained what it all meant. The through-line is the same: I want the system to make sense for the people inside it.
-        </p>
-      </div>
-
-      <div class="about-containers quick-facts">
-        <div class="details-container">
-          <h3>Engineering + design</h3>
-          <p>Not either/or.</p>
+      <p class="section__text__p1">Overview</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
         </div>
-        <div class="details-container">
-          <h3>Currently</h3>
-          <p>Incoming Equinix Service Design (Global Ops).</p>
-        </div>
-        <div class="details-container">
-          <h3>Next</h3>
-          <p>Senior service design or strategy roles - or something I build.</p>
-        </div>
-      </div>
-
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#direction'" />
-    </section>
-
-    <section id="direction">
-      <p class="section__text__p1">Direction</p>
-      <h1 class="title">Where I'm headed</h1>
-      <div class="about-body">
-        <p>
-          Service design is my north star - not as a title, but as a way of thinking. I want to be the person who maps the journey and fixes the system and explains it to the room.
-        </p>
-        <p>
-          My career tree shows the paths I'm genuinely curious about - from design org leadership to technical product to building my own thing.
-        </p>
-      </div>
-
-      <div class="career-tree-shell">
-        <iframe
-          src="./assets/marium_career_tree.html"
-          title="Marium Ashraf career tree"
-          class="career-tree-frame"
-        ></iframe>
-      </div>
-
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#work'" />
-    </section>
-
-    <section id="work">
-      <p class="section__text__p1">Work</p>
-      <h1 class="title">Case studies</h1>
-
-      <div class="about-containers work-grid">
-        <article class="details-container color-container">
-          <h2 class="experience-sub-title project-title">01. Equinix - Service Design Intern (in progress)</h2>
-          <p class="project-blurb">
-            Journey maps, service blueprints, and research documentation for Global Operations and Design &amp; Construction. Supporting design ops through standard artifacts, workflow improvements, and continuous discovery support.
-          </p>
-          <p class="project-details">
-            This is the first role where the title matches how I've always thought: making infrastructure-scale systems legible on the human side.
-          </p>
-          <p class="project-details"><strong>Deliverables:</strong> Journey maps · Service blueprints · Research synthesis · Workflow documentation · Discovery support</p>
-        </article>
-
-        <article class="details-container color-container">
-          <h2 class="experience-sub-title project-title">02. Lyrata - Operations &amp; AI Intern</h2>
-          <p class="project-blurb">
-            <strong>Problem:</strong> 5 parallel initiatives, low visibility, weak prioritization.
-          </p>
-          <p class="project-details">
-            <strong>What I did:</strong> Applied DaRMoD, mapped ownership gaps, built dashboards, wrote exec trade-off decks.
-          </p>
-          <p class="project-details">
-            <strong>Outcome:</strong> ~90% reduction in process friction; initiatives moved from ambiguous to tracked.
-          </p>
-          <p class="project-details"><strong>Shows:</strong> I fix systems and communicate upward.</p>
-        </article>
-
-        <article class="details-container color-container">
-          <h2 class="experience-sub-title project-title">03. Riipen / Second Nature Safety - Strategy Lead</h2>
-          <p class="project-blurb">
-            <strong>Brief:</strong> Build a customer acquisition strategy a safety training firm could actually execute.
-          </p>
-          <p class="project-details">
-            <strong>What I did:</strong> Led team of 4, owned scope + segment analysis, produced ranked recommendations and trade-offs.
-          </p>
-          <p class="project-details"><strong>Shows:</strong> I can run a room and turn ambiguity into usable decisions.</p>
-        </article>
-
-        <article class="details-container color-container">
-          <h2 class="experience-sub-title project-title">04. CapsuleOS - Personal Project</h2>
-          <p class="project-blurb">
-            Full-stack AI wardrobe planner with a "Should I buy this?" assistant: overlap analysis, price-per-wear, review signals.
-          </p>
-          <p class="project-details">
-            Built end-to-end because I had a real problem and wanted a working system, not just a prototype.
-          </p>
-          <p class="project-details"><strong>Stack:</strong> React · Vite · Tailwind · FastAPI · SQLite · Docker · CI/CD eval harness</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/marsh-design/capsule-os'">GitHub</button>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p><strong>Incoming Service Design Intern @ Equinix</strong><br />Service design · design ops · strategy · delivery</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>B.Eng. Computer Engineering (Software)<br />TMU · Apr 2027<br /><br />Design, requirements, databases, OS, algorithms, engineering economics</p>
+            </div>
           </div>
-        </article>
-      </div>
-
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#method'" />
-    </section>
-
-    <section id="method">
-      <p class="section__text__p1">Method</p>
-      <h1 class="title">How I work</h1>
-
-      <div class="about-containers method-grid">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Clarity over completeness</h2>
-          <p>I'd rather give you the precise 20% that matters than a perfect map no one uses.</p>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Systems before surfaces</h2>
-          <p>Most "UX" issues are really process, ownership, or organizational issues.</p>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Usable, not just deliverable</h2>
-          <p>I build docs people read, dashboards people check, and workflows people adopt.</p>
+          <div class="text-container">
+            <p>
+              Incoming to Equinix Service Design: mapping journeys, building service blueprints, and improving design operations workflows.
+            </p>
+            <p class="hero-metrics">
+              <strong>Incoming @ Equinix</strong> · <strong>50/50</strong> Service Design + Design Ops · <strong>5+</strong> initiatives delivered
+            </p>
+            <p>
+              Journey maps · service blueprints · stakeholder workshops · research synthesis · documentation that teams adopt
+            </p>
+          </div>
         </div>
       </div>
-
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#certifications'" />
     </section>
+
+<!-- ===== CERTIFICATIONS & TRAINING SECTION ===== -->
+<section id="certifications">
+  <p class="section__text__p1">Credentials</p>
+  <h1 class="title">Certifications</h1>
+  
+  <div class="certifications-container">
+    <div class="certification-card featured">
+      <div class="cert-badge">🏆</div>
+      <h3 class="cert-title">Vector Institute DaRMoD Cohort</h3>
+      <p class="cert-org">Vector Institute</p>
+      <p class="cert-date">Fall 2025</p>
+      <p class="cert-description">
+        <strong>DaRMoD</strong> (Data Readiness for Model Development) — applied at Lyrata: workflows, ownership, gaps → structured improvements.
+      </p>
+      <div class="cert-skills">
+        <span class="cert-skill">Workflow analysis</span>
+        <span class="cert-skill">Data ownership</span>
+        <span class="cert-skill">Executive-ready reporting</span>
+        <span class="cert-skill">Competitive analysis</span>
+      </div>
+    </div>
+    
+    <div class="certification-card">
+      <div class="cert-badge">🎓</div>
+      <h3 class="cert-title">B.Eng Computer Engineering</h3>
+      <p class="cert-org">Toronto Metropolitan University</p>
+      <p class="cert-date">Graduating April 2027</p>
+      <p class="cert-description">
+        Software design, requirements &amp; PM, databases, OS, algorithms, engineering economics.
+      </p>
+    </div>
+  </div>
+  
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#achievements'" />
+</section>
+
+<!-- ===== ACHIEVEMENTS & METRICS SECTION ===== -->
+<section id="achievements">
+  <p class="section__text__p1">Impact</p>
+  <h1 class="title">At a glance</h1>
+  
+  <div class="achievements-container">
+    <div class="achievement-card">
+      <div class="achievement-icon">🧩</div>
+      <div class="achievement-number" data-target="50">0</div>
+      <div class="achievement-symbol">%</div>
+      <p class="achievement-label">Service Design Focus</p>
+      <p class="achievement-description">Equinix role scope: service design + design ops</p>
+    </div>
+    
+    <div class="achievement-card">
+      <div class="achievement-icon">⚡</div>
+      <div class="achievement-number" data-target="90">0</div>
+      <div class="achievement-symbol">%</div>
+      <p class="achievement-label">Process Friction Reduction</p>
+      <p class="achievement-description">Lyrata — visibility &amp; prioritization</p>
+    </div>
+    
+    <div class="achievement-card">
+      <div class="achievement-icon">💬</div>
+      <div class="achievement-number" data-target="100">0</div>
+      <div class="achievement-symbol">+</div>
+      <p class="achievement-label">Daily Customer Interactions</p>
+      <p class="achievement-description">Miratel — volume + patterns</p>
+    </div>
+  </div>
+  
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+</section>
+
+<!-- ===== EXPERIENCE (Hybrid: clean + recruiter-friendly) ===== -->
+<section id="experience">
+  <p class="section__text__p1">Roles</p>
+  <h1 class="title">Experience (Equinix-first)</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers experience-grid">
+
+      <!-- Operations & AI Intern, Lyrata -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Incoming Service Design Intern · Equinix</h2>
+        <p class="experience-date">Incoming · 2025</p>
+        <ul class="exp-bullets">
+          <li>Service design deliverables: journey maps, service blueprints, research summaries</li>
+          <li>Design ops: standard artifacts, workflow optimization, continuous discovery support</li>
+          <li>Cross-functional collaboration with UX, research, and operations stakeholders</li>
+        </ul>
+      </div>
+
+      <!-- Operations & AI Intern, Lyrata -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Operations &amp; AI Intern · Lyrata</h2>
+        <p class="experience-date">Completed · Apr 2025</p>
+        <ul class="exp-bullets">
+          <li><strong>DaRMoD</strong> — workflows, ownership, gaps → <strong>5+</strong> parallel initiatives</li>
+          <li>Tracking + dashboards → <strong>~90%</strong> less friction</li>
+          <li>Exec decks, competitive &amp; ecosystem mapping</li>
+        </ul>
+      </div>
+
+      <!-- Strategy and Operations Consultant, Riipen Labs -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Strategy &amp; Operations Consultant, Riipen Labs</h2>
+        <p class="experience-date">January 2026 – April 2026</p>
+        <ul class="exp-bullets">
+          <li>Led <strong>4+</strong> — growth strategy, execution-ready plan</li>
+          <li>Partnerships / M&amp;A — structured prioritization</li>
+          <li>Client deck — trade-offs, recommendations, next steps</li>
+        </ul>
+      </div>
+
+      <!-- Customer Relationship Agent, Miratel -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Customer Relationship Agent · Miratel (Part-Time)</h2>
+        <p class="experience-date">Completed · Apr 2025</p>
+        <ul class="exp-bullets">
+          <li><strong>100+</strong> interactions/day — journey + friction insight</li>
+          <li><strong>Salesforce</strong> — patterns → better reporting &amp; decisions</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills">
+  <p class="section__text__p1">Stack</p>
+  <h1 class="title">Skills &amp; tools</h1>
+  
+  <div class="experience-details-container">
+    <div class="about-containers skills-four">
+
+      <!-- Digital Strategy & Analysis -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Digital Strategy &amp; Analysis</h2>
+        <p>
+          Journeys &amp; funnels · competitive / market scans · ambiguous problems → clear hypotheses
+        </p>
+      </div>
+
+      <!-- Data & Insights -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Data &amp; Insights</h2>
+        <p>
+          <strong>SQL</strong> (Postgres, BigQuery) · <strong>Excel</strong> · KPIs · diagnostics · validation → decisions
+        </p>
+      </div>
+
+      <!-- Execution & Collaboration -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Execution &amp; Collaboration</h2>
+        <p>
+          Cross-functional (product, ops, leadership) · exec-ready decks · docs · <strong>Agile</strong> — <strong>Jira</strong>, <strong>Azure DevOps</strong>
+        </p>
+      </div>
+
+      <!-- Tools & Technologies -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Tools &amp; Technologies</h2>
+        <p>
+          <strong>Python</strong> · JS/TS · REST · <strong>OpenAI</strong> · Zapier · Docker · AWS/GCP · CI/CD (<strong>GitHub Actions</strong>)
+        </p>
+      </div>
+
+    </div>
+  </div>
+  
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#analysis-delivery'" />
+</section>
+
+<!-- ===== ANALYSIS & DELIVERY SECTION ===== -->
+<section id="analysis-delivery">
+  <p class="section__text__p1">How I work</p>
+  <h1 class="title">Analysis &amp; Delivery</h1>
+  
+  <p class="section-intro">Ambiguous ops → measurable workflows → tools teams adopt.</p>
+  
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <!-- Business Intelligence & Analytics -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Digital &amp; Customer Insight</h2>
+        <p>
+          Funnels · KPIs · diagnostics · <strong>SQL + Excel</strong> → leadership-ready numbers
+        </p>
+      </div>
+
+      <!-- Systems Analysis & Requirements -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Structured Delivery</h2>
+        <p>
+          Ambiguity → workflows + docs · <strong>Jira · Azure DevOps</strong> · trade-offs + handoffs built for adoption
+        </p>
+      </div>
+
+      <!-- Stakeholder Collaboration & Communication -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Stakeholder &amp; Executive Communication</h2>
+        <p>
+          Complex inputs → priorities + implementation path · client &amp; internal decks · product / ops / leadership alignment
+        </p>
+      </div>
+
+    </div>
+  </div>
+  
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects">
+  <p class="section__text__p1">Builds</p>
+  <h1 class="title">Projects</h1>
+
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <!-- CapsuleOS -->
+      <div class="details-container color-container project-card" data-category="frontend backend ai">
+        <div class="article-container">
+          <img src="./assets/project-1.png" alt="CapsuleOS - quarterly capsule wardrobe planner" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">CapsuleOS</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="React">⚛️</span>
+          <span class="tech-icon" title="FastAPI">⚡</span>
+          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="SQLite">🗄️</span>
+          <span class="tech-icon" title="Tailwind">🎨</span>
+          <span class="tech-icon" title="Docker">🐳</span>
+        </div>
+        <div class="project-metrics">
+          <span class="metric-badge">Full-Stack</span>
+          <span class="metric-badge">AI Decision Assistant</span>
+          <span class="metric-badge">CI/CD</span>
+        </div>
+        <p class="project-blurb">
+          Capsule planner + <strong>“Should I buy this?”</strong> decision assistant — overlap, price-per-wear, review signals.
+        </p>
+        <p class="project-details">
+          <strong>React · Vite · Tailwind · FastAPI · SQLite</strong> · real data · scoring · cache · CI · eval harness · demo soon
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/marsh-design/capsule-os'">GitHub</button>
+        </div>
+      </div>
+
+      <!-- FastAPI Observability Demo -->
+      <div class="details-container color-container project-card" data-category="backend devops">
+        <div class="article-container">
+          <img src="./assets/dashboard.png" alt="FastAPI Observability Demo preview" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">FastAPI Observability Demo</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="FastAPI">⚡</span>
+          <span class="tech-icon" title="Grafana">📊</span>
+          <span class="tech-icon" title="Prometheus">🔍</span>
+          <span class="tech-icon" title="Docker">🐳</span>
+          <span class="tech-icon" title="OpenTelemetry">📡</span>
+        </div>
+        <div class="project-metrics">
+          <span class="metric-badge">Full Observability</span>
+          <span class="metric-badge">Load Tested</span>
+          <span class="metric-badge">Production-Ready</span>
+        </div>
+        <p class="project-blurb">
+          <strong>FastAPI</strong> + full observability: <strong>Grafana · Prometheus · Tempo · Loki</strong> · OpenTelemetry · Docker Compose
+        </p>
+        <p class="project-details">
+          3 services · traces · metrics · logs · <code>Locust</code> / <code>k6</code> load tests · Grafana dashboards
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/marsh-design/fastapi_observability_main'">GitHub</button>
+        </div>
+      </div>
+
+      <!-- Personal Finance Dashboard -->
+      <div class="details-container color-container project-card" data-category="frontend backend">
+        <div class="article-container">
+          <img src="./assets/project-3.png" alt="Personal Finance Dashboard preview" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Personal Finance Dashboard</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="Python">🐍</span>
+          <span class="tech-icon" title="Streamlit">📈</span>
+          <span class="tech-icon" title="SQL">🗄️</span>
+          <span class="tech-icon" title="Docker">🐳</span>
+          <span class="tech-icon" title="Pandas">🐼</span>
+        </div>
+        <div class="project-metrics">
+          <span class="metric-badge">ETL Pipeline</span>
+          <span class="metric-badge">Data Visualization</span>
+          <span class="metric-badge">Containerized</span>
+        </div>
+        <p class="project-blurb">
+          <strong>Streamlit</strong> spend analytics — Bluecoins data · budgets · category trends
+        </p>
+        <p class="project-details">
+          ETL: CSV → SQL → UI · <strong>pandas · SQLAlchemy</strong> · Docker Compose · income / categories / balance charts
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/marsh-design/personal-finance-dashboard-clean'">GitHub</button>
+
+        </div>
+      </div>
+
+      <!-- Robo Advisor -->
+      <div class="details-container color-container project-card" data-category="ai backend">
+        <div class="article-container">
+          <img src="./assets/project-4.png" alt="Robo Advisor preview" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Robo Advisor</h2>
+        <div class="tech-stack">
+          <span class="tech-icon" title="AWS">☁️</span>
+          <span class="tech-icon" title="AWS Lex">💬</span>
+          <span class="tech-icon" title="AWS Lambda">⚡</span>
+          <span class="tech-icon" title="NLP">🧠</span>
+          <span class="tech-icon" title="Serverless">🚀</span>
+        </div>
+        <div class="project-metrics">
+          <span class="metric-badge">Serverless</span>
+          <span class="metric-badge">NLP-Powered</span>
+          <span class="metric-badge">AWS Architecture</span>
+        </div>
+        <p class="project-blurb">
+          Serverless retirement-planning bot — <strong>AWS Lex · Lambda</strong> · risk-based portfolios
+        </p>
+        <p class="project-details">
+          Intent validation · secure calcs · serverless scale · conversational UX
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/marsh-design/roboadvisor'">GitHub</button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+</section>
+
 
     <section id="contact">
-      <p class="section__text__p1">Contact</p>
-      <h1 class="title">Let's talk.</h1>
-
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      
       <div class="contact-container">
         <div class="contact-info">
-          <p>
-            I'm interested in roles in service design, design ops, and strategy - especially where engineering fluency is an asset, not an afterthought.
-          </p>
-
-          <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-              <p><a href="mailto:mariumashraf.MA@gmail.com">mariumashraf.MA@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-              <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-              <p><a href="https://www.linkedin.com/in/mariumashraf/" target="_blank" rel="noopener">linkedin.com/in/mariumashraf</a></p>
-            </div>
-            <div class="contact-info-container">
-              <img src="./assets/github.png" alt="Github icon" class="icon contact-icon" />
-              <p><a href="https://github.com/marsh-design" target="_blank" rel="noopener">github.com/marsh-design</a></p>
-            </div>
-            <div class="contact-info-container">
-              <img src="./assets/education.png" alt="Resume icon" class="icon contact-icon" />
-              <p><a href="./assets/Marium_Ashraf_Resume_.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
-            </div>
+          <h3>Let's talk</h3>
+          <p>Roles, projects, or coffee chats — reach out below.</p>
+          
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:mariumashraf.MA@gmail.com">mariumashraf.MA@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/mariumashraf/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/education.png" alt="Equinix role icon" class="icon contact-icon" />
+          <p><a href="./assets/equinix-service-design-intern-jd.pdf" target="_blank" rel="noopener">Equinix Service Design JD</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/experience.png" alt="Career tree icon" class="icon contact-icon" />
+          <p><a href="./assets/marium_career_tree.html" target="_blank" rel="noopener">Career Tree</a></p>
+        </div>
           </div>
         </div>
-
+        
         <form class="contact-form" id="contact-form">
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -270,21 +521,23 @@
         </form>
       </div>
     </section>
-
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#work">Work</a></li>
-            <li><a href="#direction">Direction</a></li>
-            <li><a href="#method">Method</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#analysis-delivery">Analysis &amp; Delivery</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2026 Marium Ashraf. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Marium Ashraf. All Rights Reserved.</p>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

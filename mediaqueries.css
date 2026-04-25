@@ -154,11 +154,6 @@
     grid-template-columns: 1fr;
   }
 
-  .work-grid,
-  .method-grid {
-    grid-template-columns: 1fr;
-  }
-
   .achievements-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -209,13 +204,5 @@
   
   .cert-title {
     font-size: 1.25rem;
-  }
-
-  .career-tree-frame {
-    min-height: 680px;
-  }
-
-  .hero-headline {
-    font-size: 2rem;
   }
 }

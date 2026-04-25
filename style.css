@@ -271,18 +271,6 @@ section {
   min-height: 2.5rem;
 }
 
-.hero-headline {
-  max-width: 44rem;
-  margin: 0 auto 1rem;
-  line-height: 1.2;
-}
-
-.hero-subhead {
-  max-width: 42rem;
-  margin: 0 auto 1rem;
-  line-height: 1.7;
-}
-
 .hero-metrics {
   margin: 1rem 0;
   font-size: 1.1rem;
@@ -469,18 +457,6 @@ section {
 .section-container {
   gap: 4rem;
   height: 80%;
-}
-
-.about-body {
-  max-width: 56rem;
-  margin: 0 auto 1.5rem;
-  line-height: 1.7;
-}
-
-.about-lead {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  font-weight: 600;
 }
 
 .section__pic-container {
@@ -780,40 +756,6 @@ article .icon {
 
 #projects {
   position: relative;
-}
-
-#work {
-  position: relative;
-}
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-#method {
-  position: relative;
-}
-
-.method-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.career-tree-shell {
-  max-width: 100%;
-  margin: 1rem auto 2rem;
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  background: var(--card-bg);
-  padding: 1rem;
-}
-
-.career-tree-frame {
-  width: 100%;
-  min-height: 760px;
-  border: 0;
-  background: var(--bg-color);
 }
 
 .project-filters {
