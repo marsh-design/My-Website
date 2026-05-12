@@ -302,9 +302,11 @@ section {
   color: var(--text-color);
 }
 
-#profile .hero-role-line {
-  margin: 0.35rem auto 0.2rem;
+#profile .hero-company {
+  margin: 0.2rem auto 0.35rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-color);
 }
 
 #profile .hero-bridging {

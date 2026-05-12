@@ -197,9 +197,9 @@ function initTypingAnimation() {
   if (!typingElement) return;
   
   const texts = [
-    'Designing operational systems for real-world teams',
-    'Designing operational systems for real-world teams',
-    'Designing operational systems for real-world teams'
+    'service design intern',
+    'service design intern',
+    'service design intern'
   ];
   
   let textIndex = 0;
