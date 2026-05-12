@@ -191,49 +191,25 @@ function showNotification(message, type = 'info') {
   }, 5000);
 }
 
-// Typing animation
+// Typing animation — one full line, no delete loop
 function initTypingAnimation() {
   const typingElement = document.getElementById('typing-text');
   if (!typingElement) return;
-  
-  const texts = [
-    'service design intern',
-    'service design intern',
-    'service design intern'
-  ];
-  
-  let textIndex = 0;
+
+  const fullText = 'Service Design Intern @ Equinix';
   let charIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 100;
-  
+  const typingSpeed = 55;
+
   function type() {
-    const currentText = texts[textIndex];
-    
-    if (isDeleting) {
-      typingElement.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
-      typingSpeed = 50;
+    if (charIndex < fullText.length) {
+      typingElement.textContent = fullText.slice(0, charIndex + 1);
+      charIndex += 1;
+      setTimeout(type, typingSpeed);
     } else {
-      typingElement.textContent = currentText.substring(0, charIndex + 1);
-      charIndex++;
-      typingSpeed = 100;
+      typingElement.textContent = fullText;
     }
-    
-    if (!isDeleting && charIndex === currentText.length) {
-      // Pause at end of text
-      typingSpeed = 2000;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      // Move to next text
-      isDeleting = false;
-      textIndex = (textIndex + 1) % texts.length;
-      typingSpeed = 500;
-    }
-    
-    setTimeout(type, typingSpeed);
   }
-  
+
   type();
 }
 
