@@ -197,9 +197,9 @@ function initTypingAnimation() {
   if (!typingElement) return;
   
   const texts = [
-    'Incoming Service Design Intern @ Equinix',
-    'Incoming Service Design Intern @ Equinix',
-    'Incoming Service Design Intern @ Equinix'
+    'Designing operational systems for real-world teams',
+    'Designing operational systems for real-world teams',
+    'Designing operational systems for real-world teams'
   ];
   
   let textIndex = 0;

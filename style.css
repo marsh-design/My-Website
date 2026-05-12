@@ -294,6 +294,32 @@ section {
   color: var(--text-secondary);
 }
 
+#profile .hero-typing-line {
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  margin: 0.35rem auto 0.5rem;
+  min-height: 2.25rem;
+  line-height: 1.35;
+  color: var(--text-color);
+}
+
+#profile .hero-role-line {
+  margin: 0.35rem auto 0.2rem;
+  font-weight: 600;
+}
+
+#profile .hero-bridging {
+  margin: 0.15rem auto 0.35rem;
+  font-weight: 500;
+}
+
+#profile .hero-scale {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.55;
+  max-width: 38rem;
+  margin: 0.25rem auto 0.85rem;
+}
+
 .section-intro {
   max-width: 42rem;
   margin: 0 auto 1.4rem;
@@ -433,6 +459,10 @@ section {
   position: relative;
 }
 
+#about .text-container p + p {
+  margin-top: 0.85rem;
+}
+
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -441,7 +471,7 @@ section {
 
 .about-containers.skills-four {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .about-containers.experience-grid {
@@ -540,9 +570,17 @@ section {
 }
 
 .cert-badge {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
   display: block;
+}
+
+.certification-card.featured .cert-badge {
+  color: var(--hover-color);
 }
 
 .cert-title {
