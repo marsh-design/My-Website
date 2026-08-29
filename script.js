@@ -196,7 +196,7 @@ function initTypingAnimation() {
   const typingElement = document.getElementById('typing-text');
   if (!typingElement) return;
 
-  const fullText = 'Service Design Intern @ Equinix';
+  const fullText = 'Strategy · Systems · Technology · Problem Solving';
   let charIndex = 0;
   const typingSpeed = 55;
 

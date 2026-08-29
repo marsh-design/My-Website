@@ -269,6 +269,8 @@ section {
   object-fit: cover;
   object-position: center 20%;
   border: 3px solid var(--border-color);
+  image-orientation: from-image;
+  display: block;
 }
 
 .section__text {
@@ -505,6 +507,8 @@ section {
   height: 400px;
   object-fit: cover;
   object-position: center center;
+  image-orientation: from-image;
+  display: block;
 }
 
 .arrow {
